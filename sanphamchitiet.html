@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiShop</title>
+  <link rel="stylesheet" href="./css/shoppingcart.css">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="./font/themify-icons/themify-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+  <header class="bg-white text-center py-3">
+
+    <div id="banner">
+      <img src="./images/banner.webp" class="w-100" height="56" alt="" />
+    </div>
+
+
+    <div class="row align-items-center justify-content-between mx-0 px-3">
+      <div class="col-md-auto" id="logo">
+        <h1><a href="./index.html" class="text-danger">MiShop</a></h1>
+      </div>
+      <div class="col-md-6">
+        <form class="input-group">
+          <input type="text" class="form-control" id="searchInput" placeholder="Tìm kiếm..." />
+          <button class="btn btn-outline-secondary" type="button">
+            <i class="ti ti-search"></i>
+          </button>
+        </form>
+      </div>
+      <div class="col-md-auto">
+        <a href="./giohang.html" class="cart-container ms-3">
+          <i class="cart-icon ti-shopping-cart"></i>
+        </a>
+        <span class="cart-quantity">0</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light text-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" id="mobilesearch"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item nav-header">
+            <a class="nav-link" href="index.html">TRANG CHỦ</a>
+          </li>
+          <li class="nav-item nav-header">
+            <a class="nav-link" href="sanpham.html">SẢN PHẨM</a>
+          </li>
+          <li class="nav-item nav-header">
+            <a class="nav-link" href="./gioithieu.html">GIỚI THIỆU</a>
+          </li>
+          <li class="nav-item nav-header">
+            <a class="nav-link" href="#">KHUYẾN MÃI</a>
+          </li>
+          <li class="nav-item nav-header">
+            <a class="nav-link" href="./lienhe.html">LIÊN HỆ</a>
+          </li>
+        </ul>
+        <div class="top-right font-14">
+          <div class="user-account">
+            <i class="account-icon"><img src="./images/user-icon.webp" alt="User Icon"></i>
+            <div class="login-register-section font-14">
+              <div class="login-header">
+                <a href="./dangnhap.html">Đăng nhập</a>
+                &
+                <a href="./dangky.html">Đăng ký</a>
+              </div>
+              <div class="user-header font-16">
+                <a href="./login.html">Tài Khoản</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+  </nav>
+
+
+
+  <article>
+    <div class="container">
+      <h1>CHI TIẾT SẢN PHẨM</h1>
+      <div id="product-detail"></div>
+    </div>
+
+    <!-- <div class="container-fluid">
+      <div class="row product-detail">
+
+
+        <div class="col-md-6 product-detail-left">
+          <div class="container">
+            <div class="row">
+              <div class="product-detail-images">
+                <div class="images-main">
+                  <a href=""><img src="./images/sanpham1.jpg" height="300" width="250" alt=""></a>
+                </div>
+
+
+                <div class="images-list">
+                  <div class="row">
+                    <div class="col">
+                      <a href=""><img src="./images/tải xuống (6).jpg" height="100" width="100" alt=""></a>
+                      <a href=""><img src="./images/aothun2.jpg" height="100" width="100" alt=""></a>
+                      <a href=""><img src="./images/sanpham1.jpg" height="100" width="100" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-detail-description">
+
+                <div class="product-info">
+                  <div class="info-header">
+                    <div class="info-icon">
+                      <img alt="Thông tin sản phẩm" loading="lazy" width="25" height="25" decoding="async"
+                        src="https://cdn.dienthoaigiakho.vn/photos/1681799256115-thong-tin-san-pham.svg"
+                        style="color: transparent;">
+                      <span>Thông tin sản phẩm</span>
+                    </div>
+                    <div class="info-details">
+                      <div class="warranty-info">
+                        <div class="warranty-header">
+                          <p>Chế độ bảo hành:</p>
+                          <p><a href="/pages/bao-hanh-tieu-chuan">BẢO HÀNH TIÊU CHUẨN (450613)</a></p>
+                        </div>
+                        <div class="warranty-details">
+                          <p>- <strong>45 ngày</strong> 1 đổi 1, dùng thử <strong>168 giờ</strong></p>
+                          <p>- Bảo hành phần cứng <strong>6 tháng</strong></p>
+                          <p>- Bảo hành nhanh chỉ với số điện thoại</p>
+                          <p style="font-size: 10pt;">- Bảo hành màn hình xanh miễn phí 6 tháng</p>
+                        </div>
+                      </div>
+                      <p>Tình trạng quy cách sản phẩm:</p>
+                      <div class="product-specs">
+                        <ul>
+                          <li>Máy được thu lại từ khách bán lại (thu cũ), nguồn gốc xuất xứ rõ ràng.</li>
+                          <li>Sản phẩm là phiên bản quốc tế chính hãng Apple. Máy có thể đã qua bảo hành hãng hoặc thay
+                            thế linh kiện để đảm bảo sự ổn định khi dùng.</li>
+                          <li>Quy cách: Máy trần không hộp, đã qua sử dụng. Ngoại hình trầy nhẹ thân máy, mặt kính màn
+                            hình.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 product-detail-right">
+          <div class="container">
+            <div class="row">
+              <div class="product-detail-information">
+                <div class="product-detail-title">
+                  <p>Iphone 15 pro Max</p>
+                </div>
+                <div class="product-detail-price">5.000.000VND</div>
+                <div class="product-detail-version">
+                  <div class="col">
+                    <div class="version">
+                      <span class="version-number">64GB</span>
+                      <span class="version-number">128GB</span>
+                    </div>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                </div>
+                <div class="product-detail-color">
+                  <label class="color-option">
+                    <input type="radio" name="color" value="white">
+                    <span class="color-name"> Trắng</span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="color" value="black">
+                    <span class="color-name"> Đen</span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="color" value="blue">
+                    <span class="color-name"> Xanh</span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="color" value="yellow">
+                    <span class="color-name"> Vàng</span>
+                  </label>
+                </div>
+
+
+
+              </div>
+              <div class=" product-detail-actions">
+                <div class="row product-act">
+                  <button class="product-act1">MUA NGAY</button>
+                  <button class="product-act2">TRẢ GÓP</button>
+                  <button class="product-act3">THÊM VÀO GIỎ HÀNG</button>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <section class="specs">
+              <h2 class="specs-heading">Thông số kỹ thuật</h2>
+              <ul class="specs-list">
+                <li class="specs-item">
+                  <h3 class="specs-subheading">Màn Hình</h3>
+                  <ul class="sub-specs-list">
+                    <li class="sub-specs-item">
+                      <p><strong>Công nghệ màn hình:</strong> Liquid Retina IPS LCD</p>
+                    </li>
+                    <li class="sub-specs-item">
+                      <p><strong>Kích thước màn hình (inch):</strong> 6.1</p>
+                    </li>
+                    <li class="sub-specs-item">
+                      <p><strong>Độ phân giải:</strong> 828 x 1792 pixels</p>
+                    </li>
+                    <li class="sub-specs-item">
+                      <p><strong>Mặt kính cảm ứng:</strong> Kính Oleophobic (ion cường lực)</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="specs-item">
+                  <h3 class="specs-subheading">Camera Sau</h3>
+                  <ul class="sub-specs-list">
+                    <li class="sub-specs-item">
+                      <p><strong>Độ phân giải camera sau (MP):</strong> 12 MP, f/1.8, 26mm (góc rộng)<br>12 MP, f/2.4,
+                        120˚, 13mm (góc siêu rộng)</p>
+                    </li>
+                    <li class="sub-specs-item">
+                      <p><strong>Quay phim:</strong> 4K@24/30/60fps<br>1080p@30/60/120/240fps</p>
+                    </li>
+                    <li class="sub-specs-item">
+                      <p><strong>Đèn Flash:</strong> Có</p>
+                    </li>
+                    <li class="sub-specs-item">
+                      <p><strong>Tính năng camera sau:</strong> Zoom quang học<br>Xóa phông<br>Tự động lấy nét
+                        (AF)<br>Chạm lấy nét<br>Nhận diện khuôn mặt<br>HDR<br>Toàn cảnh (Panorama)<br>Chống rung quang
+                        học (OIS)<br>Ban đêm (Night Mode)<br>Góc siêu rộng (Ultrawide)<br>Quay chậm (Slow
+                        Motion)<br>Trôi nhanh thời gian (Time Lapse)<br>Chụp ảnh trong khi quay video</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <button class="view-btn"><span>Xem thêm</span><svg width="22" height="20" viewBox="0 0 22 20"
+                  fill="none"></svg></button>
+            </section>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div> -->
+
+
+
+  </article>
+  <footer class="bg-light text-white text-center py-3">
+    <div class="container">
+      <ul class="list-inline mb-2">
+        <li class="list-inline-item"><a href="#">Liên Hệ</a></li>
+        <li class="list-inline-item"><a href="#">Điều Khoản</a></li>
+        <li class="list-inline-item"><a href="#">Chính Sách Bảo Mật</a></li>
+      </ul>
+      <div class="socials-list">
+        <a href=""><i class="ti-facebook"></i></a>
+        <a href=""><i class="ti-instagram"></i></a>
+        <a href=""><i class="ti-youtube"></i></a>
+        <a href=""><i class="ti-pinterest"></i></a>
+        <a href=""><i class="ti-twitter"></i></a>
+        <a href=""><i class="ti-linkedin"></i></a>
+      </div>
+
+
+    </div>
+
+
+  </footer>
+  <script>
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Lấy tất cả các ảnh trong images-list
+      const thumbnailImages = document.querySelectorAll(".images-list img");
+
+      // Lấy ảnh chính (images-main)
+      const mainImage = document.querySelector(".images-main img");
+
+      // Thêm sự kiện click cho mỗi ảnh trong images-list
+      thumbnailImages.forEach(function (thumbnail) {
+        thumbnail.addEventListener("click", function (event) {
+          // Ngăn chặn hành vi mặc định của thẻ 'a'
+          event.preventDefault();
+
+          // Thay đổi src của ảnh chính (images-main)
+          mainImage.src = this.src;
+        });
+      });
+    });
+
+  </script>
+
+  <script src="./js/product.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiShop</title>
+  <link rel="stylesheet" href="./css/sanpham.css">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="css/auth_form.css">
+  <link rel="stylesheet" href="./font/themify-icons/themify-icons.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+  
+</head>
+
+<body >
+<div class="container-fluid">
+  <header class="bg-white text-center py-3">
+
+    <div id="banner">
+      <img src="./images/banner.webp" class="w-100" height="56" alt="" />
+    </div>
+
+
+    <div class="row align-items-center justify-content-between mx-0 px-3">
+      <div class="col-md-auto" id="logo">
+        <h1><a href="./index.html" class="text-danger">MiShop</a></h1>
+      </div>
+      <div class="col-md-6">
+        <form class="input-group">
+
+          <input type="text" class="form-control"  id="search-input" placeholder="Tìm kiếm..." />
+          <div id="productsContainer">
+          </div>
+          <button class="btn btn-outline-secondary" type="button" onclick="searchProducts()">
+            <i class="ti ti-search"></i>
+          </button>
+        </form>
+      </div>
+      <div class="col-md-auto">
+        <a href="./giohang.html" class="cart-container ms-3">
+          <i class="cart-icon ti-shopping-cart"></i>
+        </a>
+        <span class="cart-quantity">0</span>
+      </div>
+    </div><div id="danhMucSanPham" class="row mt-4"></div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light text-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" id="mobilesearch"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item nav-header">
+            <a class="nav-link" href="index.html">TRANG CHỦ</a>
+          </li>
+          <li class="nav-item nav-header">
+            <a class="nav-link" href="sanpham.html">SẢN PHẨM</a>
+          </li>
+          <li class="nav-item nav-header">
+            <a class="nav-link" href="./gioithieu.html">GIỚI THIỆU</a>
+          </li>
+          <li class="nav-item nav-header">
+            <a class="nav-link" href="#">KHUYẾN MÃI</a>
+          </li>
+          <li class="nav-item nav-header">
+            <a class="nav-link" href="./lienhe.html">LIÊN HỆ</a>
+          </li>
+        </ul>
+        <div class="top-right font-14">
+          <div class="user-account">
+            <i class="account-icon"><img src="./images/user-icon.webp" alt="User Icon"></i>
+            <div class="login-register-section font-14">
+              <div class="login-header">
+                <a href="./auth_form.html">Đăng nhập</a>
+                &
+                <a href="./auth_form.html">Đăng ký</a>
+              </div>
+              <div class="user-header font-16">
+                <a href="./login.html">Tài Khoản</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+  </nav>
+
+  <section class="container">
+    <div class="row" id="grid-section">
+      <div class=" grid-container">
+        <div class="col-md-12 item1">
+          <img src="./images/item1.png" id="item" width="100%" class="" alt="" onclick="changeImage()">
+        </div>
+        <div class="col-md-12 item2">
+          <img src="./images/item2.png" id="item" width="100%" class="" alt="">
+        </div>
+        <div class="col-md-12 item3">
+          <img src="./images/item3.png" id="item" width="100%" class="" alt="">
+        </div>
+        <div class="col-md-12 item4">
+          <img src="./images/item4.png" id="item" width="100%" class="" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+ 
+
+  <section class="container mt-4 product-section">
+
+    <div class="main-title mb-4">ĐIỆN THOẠI</div>
+  <div class="row" id="danhMucDienThoai"></div>
+      
+
+  </section>
+  <section class="container mt-4 product-section">
+    <div class="main-title mb-4">QUẦN ÁO</div>
+    <div class="row" id="danhMucQuanAo"></div>
+  </section>
+  <section class="container mt-4 product-section">
+    <div class="main-title mb-4">ĐỒNG HỒ</div>
+    <div class="row" id="danhMucDongHo"></div>
+  </section>
+
+  <section id="benefit-boxes" class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="infor">
+            <div class="infor-img">
+                <img src="./images/infor1.png" alt="">
+            </div>
+            <div class="infor-content">
+                <b class="font-16">Chất lượng hàng đầu</b>
+                <p class="font-14">Cam kết tất cả sản phẩm chính hãng 100%</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="infor">
+            <div class="infor-img">
+                <img src="./images/infor2.png" alt="">
+            </div>
+            <div class="infor-content">
+                <b class="font-16">Giao hàng siêu nhanh</b>
+                <p class="font-14">Chúng tôi cam kết giao hàng trong 24h</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="infor">
+            <div class="infor-img">
+                <img src="./images/infor3.png" alt="">
+            </div>
+            <div class="infor-content">
+                <b class="font-16">Mua hàng tiết kiệm</b>
+                <p class="font-14">Giảm giá & khuyến mãi với ưu đãi cực lớn</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="infor">
+            <div class="infor-img">
+                <img src="./images/infor4.png" alt="">
+            </div>
+            <div class="infor-content">
+                <b class="font-16">Hỗ trợ online 24/7</b>
+                <p class="font-14">Gọi ngay 0123.456.789 để được tư vấn</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <div class="banner">
+    <img class="banner-left" src="./images/banner1.png"></img>
+    <img class="banner-right" src="./images/banner2.png"></img>
+  </div>
+
+
+  <footer class="bg-light text-white text-center py-3">
+    <div class="container">
+      <ul class="list-inline mb-2">
+        <li class="list-inline-item"><a href="#">Liên Hệ</a></li>
+        <li class="list-inline-item"><a href="#">Điều Khoản</a></li>
+        <li class="list-inline-item"><a href="#">Chính Sách Bảo Mật</a></li>
+      </ul>
+      <div class="socials-list">
+        <a href=""><i class="ti-facebook"></i></a>
+        <a href=""><i class="ti-instagram"></i></a>
+        <a href=""><i class="ti-youtube"></i></a>
+        <a href=""><i class="ti-pinterest"></i></a>
+        <a href=""><i class="ti-twitter"></i></a>
+        <a href=""><i class="ti-linkedin"></i></a>
+      </div>
+
+
+    </div>
+
+
+  </footer>
+  <script>
+        /* slideshow */
+        var index = 1;
+        changeImage = function () {
+            var imgs = ["./images/item1.png", "./images/item5.png", "./images/item6.png"];
+            document.getElementById('item').src = imgs[index];
+            index++;
+            if (index == 3) {
+                index = 0;
+            }
+        }
+        setInterval(changeImage, 2000);
+        /*  */
+  </script>
+
+  <script src="js/main.js"></script>
+  <script src="js/sign_in.js"></script>
+  <script src="./js/product.js"></script>
+
+</div>
+
+</body>
+
+</html>
